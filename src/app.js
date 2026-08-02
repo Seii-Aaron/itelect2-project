@@ -37,12 +37,10 @@ console.log(mergeTaskUpdate(originalTask, { title: "New Task" }));
 
 
 const posts = await fetchSampleUsers();
-const newPosts = posts.map((post) => ({ id: post.id, name: post.name, email: post.email }));
-console.log(newPosts);
+console.log(posts);
 
 const posts2 = await fetchSampleUsersPromise();
-const newPosts2 = posts2.map((post2) => ({ id: post2.id, name: post2.name, email: post2.email }));
-console.log(newPosts2);
+console.log(posts2);
 
 try {
     const users = await fetchSampleUsers();

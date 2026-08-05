@@ -2,20 +2,23 @@
   "name": "itelect2-project",
   "version": "1.0.0",
   "description": "My IT Elective 2 backend web development project.\r Date of Project Start: July 1, 2026",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "keywords": [],
+  "homepage": "https://github.com/Seii-Aaron/itelect2-project#readme",
+  "bugs": {
+    "url": "https://github.com/Seii-Aaron/itelect2-project/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Seii-Aaron/itelect2-project.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
+  "author": "",
   "type": "module",
-  "bugs": {
-    "url": "https://github.com/Seii-Aaron/itelect2-project/issues"
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/Seii-Aaron/itelect2-project#readme"
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }

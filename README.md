@@ -5,13 +5,23 @@ Date of Project Start: July 1, 2026
 
 # API Testing
 GET
-![Screenshot](./images/api-testing-1.png)
+
+![alt text](images/api-testing-get.png)
+![alt text](images/api-testing-get-1.png) 
+![alt text](images/api-testing-get-999.png)
 
 POST
-![Screenshot](./images/api-testing-2.png)
 
-PUT
-![Screenshot](./images/api-testing-3.png)
+![alt text](images/api-testing-post.png)
 
 DELETE
-![Screenshot](./images/api-testing-4.png)
+
+![alt text](images/api-testing-delete.png)
+
+pgAdmin Tasks Table
+
+![alt text](images/pgAdmin-tasks-table.png)
+
+pgAdmin Users Table
+
+![alt text](images/pgAdmin-users-table.png)

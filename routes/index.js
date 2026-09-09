@@ -13,12 +13,28 @@ router.post("/hello", (req, res) => {
 });
 
 router.get("/tasks", async (req, res) => {
-    const tasks = await Task.findAll({ include: User, order: [["id", "ASC"]] });
+    const tasks = await Task.findAll({ 
+        include: {
+            model: User, 
+            attributes: {
+                exclude: ["password"]
+            }
+        },
+        order: [["id", "ASC"]] 
+    });
     res.json(tasks);
 });
 
 router.get("/tasks/:id", async (req, res, next) => {
-    const task = await Task.findByPk(req.params.id, { include: User });
+    const task = await Task.findByPk(req.params.id, { 
+        include: {
+            model: User, 
+            attributes: {
+                exclude: ["password"]
+            }
+        }
+    });
+    
     if(!task) {
         const err = new Error("Task not found");
         err.status = 404;

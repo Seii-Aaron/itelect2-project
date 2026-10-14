@@ -10,17 +10,23 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const secret = process.env.JWT_SECRET;
 
-if (!process.env.JWT_SECRET) {
-  console.error("JWT_SECRET is missing from .env -- the API cannot sign tokens.");
-  process.exit(1);
-}
-
 if (!secret || secret.length < 32) {
     console.error("JWT_SECRET in .env must be at least 32 characters.");
     process.exit(1);
 }
 
-app.use(cors());
+try {
+    await db.sequlize.authenticate();
+} catch (err) {
+    console.error("Cannot reach the database:", err.message);
+    process.exit(1);
+}
+
+const allowedOrigins = (process.env.CORS_ORIGIN || "")
+  .split(",")
+  .filter(Boolean);
+
+app.use(cors({ origin: allowedOrigins }));
 app.use(morgan("dev"));
 app.use(express.json());
 

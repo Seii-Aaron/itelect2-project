@@ -17,7 +17,7 @@ if (!secret || secret.length < 32) {
 }
 
 try {
-    await db.sequlize.authenticate();
+    await db.sequelize.authenticate();
 } catch (err) {
     console.error("Cannot reach the database:", err.message);
     process.exit(1);
